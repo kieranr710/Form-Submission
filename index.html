@@ -235,36 +235,5 @@
     &copy; 2025 MissedCallPro – All rights reserved.
   </footer>
 
-  <script>
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.section').forEach(section => {
-      observer.observe(section);
-    });
-
-    const form = document.querySelector("form");
-    const thankYou = document.getElementById("thank-you");
-    form.addEventListener("submit", function(e) {
-      e.preventDefault();
-      fetch(form.action, {
-        method: "POST",
-        body: new FormData(form),
-        headers: { Accept: "application/json" }
-      }).then(response => {
-        if (response.ok) {
-          form.reset();
-          thankYou.style.display = "block";
-        } else {
-          alert("Oops! There was a problem submitting your form.");
-        }
-      });
-    });
-  </script>
 </body>
 </html>
