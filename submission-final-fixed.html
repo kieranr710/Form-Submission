@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<Title>Missed Call Text Back Submission Form</Title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Missed Call Text-Back Demo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0d6efd;
+      --dark: #343a40;
+      --light: #f8f9fa;
+      --accent: #6610f2;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--light);
+      color: var(--dark);
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    nav {
+      margin-top: 15px;
+    }
+
+    nav a {
+      margin: 0 12px;
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: opacity 0.3s;
+    }
+
+    nav a:hover {
+      opacity: 0.8;
+    }
+
+    .section {
+      max-width: 960px;
+      background-color: white;
+      margin: 40px auto;
+      padding: 40px 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+
+    .section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .section h2 {
+      font-size: 26px;
+      margin-bottom: 12px;
+      color: var(--primary);
+    }
+
+    .section p, .section ul, .section ol {
+      font-size: 17px;
+      line-height: 1.75;
+    }
+
+    .section ul li, .section ol li {
+      margin-bottom: 10px;
+    }
+
+    .section i {
+      color: var(--accent);
+      margin-right: 8px;
+    }
+
+    .cta {
+      text-align: center;
+      margin: 80px 0;
+      animation: pulse 2s infinite;
+    }
+
+    .cta a {
+      display: inline-block;
+      padding: 16px 32px;
+      background-color: var(--accent);
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 18px;
+      border-radius: 8px;
+      transition: background-color 0.3s;
+    }
+
+    .cta a:hover {
+      background-color: #520dc2;
+    }
+
+    footer {
+      background-color: #e9ecef;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #6c757d;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+
+    button {
+      padding: 14px 28px;
+      background-color: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0b5ed7;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><i class="bi bi-telephone-outbound"></i> Never Lose a Customer to a Missed Call Again</h1>
+    <nav>
+      <a href="#problem">Problem</a>
+      <a href="#solution">Solution</a>
+      <a href="#how">How It Works</a>
+      <a href="#impact">Impact</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="section" id="problem">
+    <h2><i class="bi bi-exclamation-circle"></i> The Problem</h2>
+    <p>Imagine a potential customer discovering your business and calling to ask a question. But you’re busy. Or closed. Or just missed the ring.</p>
+    <p>70% of small business calls go unanswered...</p>
+  </div>
+
+  <div class="section" id="solution">
+    <h2><i class="bi bi-lightbulb"></i> The Solution</h2>
+    <ul>
+      <li><i class="bi bi-chat-dots"></i> <strong>Instant SMS replies</strong> so no lead feels ignored.</li>
+      <li><i class="bi bi-person-check"></i> <strong>Personalized branding</strong> to reinforce your business identity.</li>
+    </ul>
+  </div>
+
+  <div class="section" id="how">
+    <h2><i class="bi bi-gear-wide-connected"></i> How It Works</h2>
+    <ol>
+      <li><strong>Customer calls</strong> your number.</li>
+      <li><strong>If missed,</strong> the system instantly detects it.</li>
+    </ol>
+  </div>
+
+  <div class="section" id="impact">
+    <h2><i class="bi bi-bar-chart-line"></i> Business Impact</h2>
+    <ul>
+      <li><i class="bi bi-arrow-up-circle"></i> Most clients see a <strong>40% increase</strong> in callbacks within the first month.</li>
+    </ul>
+  </div>
+
+  <div class="section" id="pricing">
+    <h2><i class="bi bi-currency-dollar"></i> Pricing Plans</h2>
+    <p><strong>Price - £60/month:</strong> No contracts. Cancel anytime. You’ll be up and running in under 24 hours.</p>
+  </div>
+
+  <div class="section" id="contact">
+    <h2><i class="bi bi-envelope-fill"></i> Contact Us</h2>
+    <form action="https://formspree.io/f/movllkqy" method="POST">
+      <label for="business-name">Business Name</label>
+      <input type="text" id="business-name" name="business_name" placeholder="Your Business Name" required />
+
+      <label for="phone">Business Phone Number</label>
+      <input type="tel" id="phone" name="business_phone" placeholder="e.g. +1 234 567 8901" required />
+
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" placeholder="Your Full Name" required />
+
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+    <div id="thank-you" style="display:none; margin-top:20px; color: green; font-weight: 600;">Thank you! Your message has been sent.</div>
+  </div>
+
+  <div class="cta">
+    <a href="#contact">Book a Free Demo</a>
+  </div>
+
+  <footer>
+    &copy; 2025 MissedCallPro – All rights reserved.
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.section').forEach(section => {
+      observer.observe(section);
+    });
+
+    const form = document.querySelector("form");
+    const thankYou = document.getElementById("thank-you");
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { Accept: "application/json" }
+      }).then(response => {
+        if (response.ok) {
+          form.reset();
+          thankYou.style.display = "block";
+        } else {
+          alert("Oops! There was a problem submitting your form.");
+        }
+      });
+    });
+  </script>
+</body>
+</html>
